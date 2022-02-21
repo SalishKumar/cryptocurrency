@@ -3,7 +3,6 @@ import 'package:cryptocurrency/src/core/view_model/login_view_model.dart';
 import 'package:cryptocurrency/src/core/view_model/signup_view_model.dart';
 import 'package:cryptocurrency/src/custom_widgets/my_button.dart';
 import 'package:cryptocurrency/src/custom_widgets/my_textfield.dart';
-import 'package:cryptocurrency/src/view/forgetPassword.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/foundation.dart';
@@ -25,7 +24,7 @@ class SignUp extends StatelessWidget {
                       defaultTargetPlatform == TargetPlatform.android)
                   ? Border.all(width: 0, style: BorderStyle.none)
                   : Border.all()),
-          constraints: BoxConstraints(maxWidth: 500),
+          constraints: const BoxConstraints(maxWidth: 500),
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: SingleChildScrollView(
@@ -46,14 +45,14 @@ class SignUp extends StatelessWidget {
                     height: 80,
                     width: 80,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Text(
+                  const Text(
                     "Sign Up",
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   Consumer<LoginViewModel>(
@@ -63,21 +62,21 @@ class SignUp extends StatelessWidget {
                       hintText: "Email",
                     );
                   }),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   myTextField(
                     controller: signupViewModel.phoneCon,
                     hintText: "Phone",
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   myTextField(
                     controller: signupViewModel.usernameCon,
                     hintText: "Username",
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   myTextField(
@@ -85,14 +84,14 @@ class SignUp extends StatelessWidget {
                     hintText: "Password",
                     obsecureText: true,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   myButton(
                     onTap: () {},
                     label: "Sign Up",
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Container(
@@ -108,21 +107,21 @@ class SignUp extends StatelessWidget {
                               height: 30,
                               width: 30,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 5,
                             ),
                             Text("Signup with google"),
                           ],
                         )),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Divider(
+                  const Divider(
                     color: Colors.grey,
                     thickness: 2,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   Align(
@@ -131,7 +130,7 @@ class SignUp extends StatelessWidget {
                         onTap: () {
                           Navigator.pop(context);
                         },
-                        child: Text(
+                        child: const Text(
                           "Already have an account? Log in!",
                           style: TextStyle(fontWeight: FontWeight.w400),
                         ),

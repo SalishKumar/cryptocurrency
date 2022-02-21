@@ -1,5 +1,4 @@
 import 'package:cryptocurrency/src/core/routes.dart';
-import 'package:cryptocurrency/src/view/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
@@ -7,7 +6,7 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       // home: SplashScreen(),
       onGenerateRoute: generateRoute,
       debugShowCheckedModeBanner: false,

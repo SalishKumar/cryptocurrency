@@ -19,7 +19,7 @@ class Login extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
-          constraints: BoxConstraints(maxWidth: 500),
+          constraints: const BoxConstraints(maxWidth: 500),
           decoration: BoxDecoration(
               border: (defaultTargetPlatform == TargetPlatform.iOS ||
                       defaultTargetPlatform == TargetPlatform.android)
@@ -36,28 +36,28 @@ class Login extends StatelessWidget {
                   Consumer<LoginViewModel>(
                       builder: (context, loginViewModel, child) {
                     return loginViewModel.hintText != "Password"
-                        ? SizedBox()
+                        ? const SizedBox()
                         : Align(
                             alignment: Alignment.topRight,
                             child: IconButton(
                                 onPressed: () {
                                   loginViewModel.back();
                                 },
-                                icon: Icon(Icons.cancel)));
+                                icon: const Icon(Icons.cancel)));
                   }),
                   Image.asset(
                     ImageConstants.logo,
                     height: 80,
                     width: 80,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Text(
+                  const Text(
                     "Login Up",
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   Consumer<LoginViewModel>(
@@ -67,7 +67,7 @@ class Login extends StatelessWidget {
                       hintText: loginViewModel.hintText,
                     );
                   }),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Align(
@@ -77,12 +77,12 @@ class Login extends StatelessWidget {
                           Navigator.pushNamed(
                               context, ForgetPassword.routeName);
                         },
-                        child: Text(
+                        child: const Text(
                           "Forgetten password?",
                           style: TextStyle(fontWeight: FontWeight.w400),
                         ),
                       )),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   Consumer<LoginViewModel>(
@@ -95,7 +95,7 @@ class Login extends StatelessWidget {
                           loginViewModel.hintText == "Email" ? "Next" : "Login",
                     );
                   }),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Container(
@@ -111,21 +111,21 @@ class Login extends StatelessWidget {
                               height: 30,
                               width: 30,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 5,
                             ),
                             Text("Login with google"),
                           ],
                         )),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Divider(
+                  const Divider(
                     color: Colors.grey,
                     thickness: 2,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   Align(
@@ -134,7 +134,7 @@ class Login extends StatelessWidget {
                         onTap: () {
                           Navigator.pushNamed(context, SignUp.routeName);
                         },
-                        child: Text(
+                        child: const Text(
                           "Don't have an account? Sign up!",
                           style: TextStyle(fontWeight: FontWeight.w400),
                         ),

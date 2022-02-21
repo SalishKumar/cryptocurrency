@@ -1,6 +1,5 @@
 import 'package:cryptocurrency/src/core/app_constants/image_constants.dart';
 import 'package:cryptocurrency/src/core/view_model/forget_password_view_model.dart';
-import 'package:cryptocurrency/src/core/view_model/login_view_model.dart';
 import 'package:cryptocurrency/src/custom_widgets/my_button.dart';
 import 'package:cryptocurrency/src/custom_widgets/my_textfield.dart';
 import 'package:flutter/foundation.dart';
@@ -23,7 +22,7 @@ class ForgetPassword extends StatelessWidget {
                       defaultTargetPlatform == TargetPlatform.android)
                   ? Border.all(width: 0, style: BorderStyle.none)
                   : Border.all()),
-          constraints: BoxConstraints(maxWidth: 500),
+          constraints: const BoxConstraints(maxWidth: 500),
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: SingleChildScrollView(
@@ -43,14 +42,14 @@ class ForgetPassword extends StatelessWidget {
                     height: 80,
                     width: 80,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Text(
+                  const Text(
                     "Forget Password",
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   Consumer<ForgetPasswordViewModel>(
@@ -60,10 +59,10 @@ class ForgetPassword extends StatelessWidget {
                       hintText: "Email",
                     );
                   }),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   myButton(
